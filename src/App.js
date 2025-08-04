@@ -1,27 +1,27 @@
 import { BrowserRouter } from 'react-router-dom';
 import './App.css';
-import Navbar from './components/client/Navbar';
-import Footer from './components/client/Footer';
-import AppRoutes from './routes/AppRoutes';
+import MainRoutes from './routes/MainRoutes';
 import AdminRoutes from './routes/AdminRoutes';
 import UserRoutes from './routes/UserRoutes';
+import AuthRoutes from './routes/AuthRoutes';
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Navbar />
         <main>
           {/* Route Umum */}
-          <AppRoutes />
+          <MainRoutes />
 
           {/* Route Admin */}
           <AdminRoutes />
 
           {/* Route User */}
           <UserRoutes />
+
+          {/* Route Auth */}
+          <AuthRoutes />
         </main>
-        <Footer />
       </BrowserRouter>
     </>
   );
